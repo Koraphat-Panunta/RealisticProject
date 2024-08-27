@@ -31,7 +31,7 @@ public class Enemy : Character
         enemyWeaponCommand.enemy = this;
         enemyPath = new EnemyPath(agent);
         currentTactic = new SerchingTactic(this);
-        enemyFieldOfView = new FieldOfView(120, 137,this.gameObject.transform);
+        enemyFieldOfView = new FieldOfView(560, 137,this.gameObject.transform);
         enemyLookForPlayer = new EnemyLookForPlayer(this,targetMask);
        enemyGetShootDirection = new EnemyGetShootDirection(this);
         base.HP = 100;

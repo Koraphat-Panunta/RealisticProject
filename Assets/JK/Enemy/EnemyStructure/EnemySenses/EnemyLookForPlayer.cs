@@ -20,7 +20,7 @@ public class EnemyLookForPlayer : IEnemySensing
     public void Recived()
     {
         GameObject player;
-        player = _enemyFieldOfView.FindSingleObjectInView(playerMask,new Vector3(0,1.2f,0));
+        player = _enemyFieldOfView.FindSingleObjectInArea(enemy.targetMask);
         if(player != null)
         {
             IsSeeingPlayer = true;

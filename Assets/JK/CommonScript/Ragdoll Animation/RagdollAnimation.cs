@@ -32,12 +32,12 @@ public class RagdollAnimation : MonoBehaviour
     {
         deltaRoot_Hips = hip.transform.position.y - rootPos.transform.position.y;
         AddRigidbody();
-        
+
         foreach (Rigidbody rb in ragdoll)
         {
             rb.isKinematic = true;
         }
-        
+
     }
 
     // Update is called once per frame
