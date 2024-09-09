@@ -55,14 +55,14 @@ public class Missile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Collider[] Hitcoller = Physics.OverlapSphere(transform.position, 14);
+        Collider[] Hitcoller = Physics.OverlapSphere(transform.position, 7);
         foreach (Collider col in Hitcoller)
         {
             if (col.TryGetComponent<BodyPart>(out BodyPart body))
             {
                 Enemy enemy = body.GetEnemy();
                 enemy.GetComponent<RagdollAnimation>().enableRagdoll = true;
-                col.GetComponent<Rigidbody>().AddExplosionForce(10, transform.position, 14,3,ForceMode.Impulse);
+                col.GetComponent<Rigidbody>().AddExplosionForce(10, transform.position, 7,3,ForceMode.Impulse);
                 enemy.TakeDamage(1000);
             }
         }
