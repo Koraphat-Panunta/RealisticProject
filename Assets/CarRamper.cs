@@ -8,7 +8,7 @@ public class CarRamper : MonoBehaviour
     private Rigidbody rb;
     public float velocity;
     public float HitDamage;
-    private float damageMutiply = 30;
+    private float damageMutiply = 8;
 
     public Vector3 VelocityNormalized;
     private float deltaUpdate = 0.5f;

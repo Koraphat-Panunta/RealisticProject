@@ -344,7 +344,7 @@ MonoBehaviour:
   missileSpawner: {fileID: 6801497816486547076}
   targetIndex: 0
   Bullet: {fileID: 8484765704080718728, guid: 7ee4249b36f782e47bba97d3dc546fbf, type: 3}
-  Missile: {fileID: 0}
+  Missile: {fileID: 6731918717161743384, guid: 4dcd5d0f157e7d94e87ea427b3a0ebbe, type: 3}
   firingRecovery: 0
   lunchingMissileRecovery: 0
 --- !u!1 &6424668963543425471
@@ -372,7 +372,7 @@ Transform:
   m_GameObject: {fileID: 6424668963543425471}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.686, y: 0.243, z: 1.068}
+  m_LocalPosition: {x: 0.14, y: 1.17, z: 1.068}
   m_LocalScale: {x: 2.5431705, y: 1.8481214, z: 2.2383385}
   m_ConstrainProportionsScale: 0
   m_Children: []

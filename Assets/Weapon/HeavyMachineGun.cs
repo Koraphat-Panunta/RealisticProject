@@ -119,15 +119,24 @@ public class HeavyMachineGun : MonoBehaviour
         }
         else
         {
-            if (Input.GetKey(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.G))
             {
+                Debug.Log("Lunching Missile");
                 FiringMissile();
             }
         }
     }
     private void FiringMissile()
     {
-
+        var Missile = GameObject.Instantiate(this.Missile, missileSpawner);
+        if (currentLockTargetSingle != null)
+        {
+            Missile.GetComponent<Missile>().target = currentLockTargetSingle;
+        }
+        else
+        {
+            Missile.GetComponent<Missile>().target = null;
+        }
     }
     private Vector3 GetTargetLockedDirection()
     {

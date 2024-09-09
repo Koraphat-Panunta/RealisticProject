@@ -34,7 +34,11 @@ public class Bullet : MonoBehaviour
         if (collision.collider.TryGetComponent<BodyPart>(out BodyPart bodyPart))
         {
             bodyPart.GotHit(damage);
-            Debug.Log("BodyPartHit");
+        }
+        if(collision.collider.TryGetComponent<CarModel>(out CarModel carModel))
+        {
+            carModel.TakeDamage(damage);
+            Debug.Log("Car Damaged");
         }
         DrawBulletLine.bulletHitPos.Add(gameObject.transform.position);
         Destroy(gameObject);
