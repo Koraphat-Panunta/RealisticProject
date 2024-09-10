@@ -81,7 +81,7 @@ public class HeavyMachineGun : MonoBehaviour
     {
         if(currentLockTargetSingle.TryGetComponent<BodyPart>(out BodyPart bodyPart))
         {
-            if (bodyPart.GetEnemy().enemyStateManager._currentState == bodyPart.GetEnemy().enemyStateManager.enemyDead)
+            if (bodyPart.GetEnemy().GetHP()<=0)
             {
                 SwitchTargetLocked();
             }

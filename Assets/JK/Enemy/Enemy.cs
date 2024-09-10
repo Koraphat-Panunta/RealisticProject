@@ -113,4 +113,8 @@ public class Enemy : Character
             yield return null;
         }
     }
+    public float GetHP()
+    {
+        return base.HP;
+    }
 }

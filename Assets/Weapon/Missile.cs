@@ -33,7 +33,7 @@ public class Missile : MonoBehaviour
             }
             else
             {
-                Vector3 dir = randomPos - transform.position;
+                Vector3 dir = FindAnyObjectByType<CarModel>().transform.forward*7 - transform.position;
                 RotateTowards(dir, 20);
                 GetComponent<Rigidbody>().AddForce(dir.normalized * 4000 * Time.deltaTime, ForceMode.Force);
                 Debug.Log("Cruise Missile in coming randomly");
@@ -48,7 +48,7 @@ public class Missile : MonoBehaviour
             }
             else
             {
-                Vector3 dir = randomPos - transform.position;
+                Vector3 dir =  FindAnyObjectByType<CarModel>().transform.forward * 7 - transform.position;
                 RotateTowards(dir,1);              
             }
         }

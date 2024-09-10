@@ -24,4 +24,9 @@ public class CarModel : Character
     {
         return base.HP;
     }
+    public void SetHP(float hp)
+    {
+        base.HP = hp;
+        
+    }
 }
