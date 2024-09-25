@@ -58,6 +58,7 @@ public class GameManagerLogic : MonoBehaviour
                     }
                 }
                 timeRemain -= Time.deltaTime;
+                Debug.Log("timeRemain "+timeRemain);
             }
             else
             {
