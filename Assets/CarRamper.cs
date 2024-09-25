@@ -37,11 +37,8 @@ public class CarRamper : MonoBehaviour
         if(collision.collider.TryGetComponent<BodyPart>(out BodyPart bodyPart))
         {
             float dot = Vector3.Dot(VelocityNormalized, (bodyPart.transform.position - transform.position).normalized);
-            Debug.Log("Velocity Nor =" + VelocityNormalized + "Dir Nor =" + (bodyPart.transform.position - transform.position).normalized);
             dot = Mathf.Abs(dot);
-            Debug.Log("Dot = "+dot);
             bodyPart.GotHit(HitDamage * dot);
-            Debug.Log("Hit Damage =" + HitDamage +"HitDamage*Dot =" + HitDamage * dot);
         }
     }
     

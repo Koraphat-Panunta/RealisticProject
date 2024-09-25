@@ -9,6 +9,7 @@ public class UIHpbar : MonoBehaviour
     public CarModel CarModel;
     void Start()
     {
+        CarModel = FindObjectOfType<CarModel>();
     }
 
     // Update is called once per frame
