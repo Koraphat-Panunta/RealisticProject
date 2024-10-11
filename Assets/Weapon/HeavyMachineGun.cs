@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HeavyMachineGun : MonoBehaviour
@@ -16,19 +18,34 @@ public class HeavyMachineGun : MonoBehaviour
 
     public float firingRecovery;
     public float lunchingMissileRecovery;
+    public bool isCooldown = false;
+    public float coolDownTime;
 
     public RectTransform ui;
+    public TextMeshProUGUI coolDowntext;
     private void Start()
     {
         _weaponView = new FieldOfView(400, 137, gameObject.transform);
     
         ui.gameObject.SetActive(false);
+        coolDowntext.enabled = false;
     }
     private void Update()
     {
         PerformedInput();
         targetLocked = FindTarget();
-       
+       if(isCooldown == true)
+        {
+            coolDownTime += Time.deltaTime;
+            coolDowntext.enabled = true;
+            coolDowntext.text = "Missile cooldown :"+(5-coolDownTime.ConvertTo<int>());
+            if(coolDownTime >= 5)
+            {
+                coolDowntext.enabled = false;
+                coolDownTime = 0;
+                isCooldown = false;
+            }
+        }
        
         if (targetLocked.Count > 0)
         {
@@ -165,10 +182,11 @@ public class HeavyMachineGun : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.G)&&isCooldown == false)
             {
                 Debug.Log("Lunching Missile");
                 FiringMissile();
+                isCooldown = true;
             }
         }
     }
