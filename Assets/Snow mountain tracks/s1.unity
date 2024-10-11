@@ -3687,6 +3687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 3823949577902948272, guid: 1824ca05054fb0d42978b02cf6d65c2d, type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 2071493690}
     - target: {fileID: 7809218744096071732, guid: 1824ca05054fb0d42978b02cf6d65c2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 281.5913
@@ -5543,6 +5547,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!224 &2071493690 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 260316616999065854, guid: e4b4c80d338e7774bb91740992d85dfc, type: 3}
+  m_PrefabInstance: {fileID: 3205181862750236247}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2100301604 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3875926161288939243, guid: 1824ca05054fb0d42978b02cf6d65c2d, type: 3}
@@ -5698,14 +5707,6 @@ PrefabInstance:
     - target: {fileID: 2683416577825294799, guid: e4b4c80d338e7774bb91740992d85dfc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5868851058136663289, guid: e4b4c80d338e7774bb91740992d85dfc, type: 3}
-      propertyPath: m_fontSize
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 5868851058136663289, guid: e4b4c80d338e7774bb91740992d85dfc, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7453254979832027029, guid: e4b4c80d338e7774bb91740992d85dfc, type: 3}
       propertyPath: CarModel

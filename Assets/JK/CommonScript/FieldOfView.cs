@@ -8,11 +8,13 @@ public class FieldOfView
     private float Radiant;
     private float AngelInDegree;
     private Transform objView;
+    private LayerMask layerCast;
     public FieldOfView(float radiant, float angelInDegree, Transform objView)
     {
         Radiant = radiant;
         AngelInDegree = angelInDegree;
         this.objView = objView;
+        layerCast = LayerMask.GetMask("Defualt");
     }
     public GameObject FindSingleObjectInView(LayerMask targetMask)
     {
@@ -91,7 +93,7 @@ public class FieldOfView
                 Objdirection.Normalize();
                 if (Vector3.Angle(objView.transform.forward, Objdirection) < AngelInDegree / 2)
                 {
-                    if (Physics.Raycast(objView.transform.position, (tarObj.transform.position - objView.transform.position).normalized, out RaycastHit hit, 1000))
+                    if (Physics.Raycast(objView.transform.position, (tarObj.transform.position - objView.transform.position).normalized, out RaycastHit hit, 1000,layerCast+targetMask))
                     {
                         Debug.DrawLine(objView.transform.position, hit.point);
                         if (hit.collider.gameObject == tarObj.gameObject)

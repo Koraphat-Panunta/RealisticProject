@@ -52,3 +52,4 @@ MonoBehaviour:
   Score: 0
   EndScreenText: {fileID: 0}
   TimeCountText: {fileID: 0}
+  ScoreShow: {fileID: 0}

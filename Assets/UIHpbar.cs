@@ -15,7 +15,6 @@ public class UIHpbar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Car HP :" + CarModel.GetHP());
         HPbar.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, CarModel.GetHP());
     }
 }

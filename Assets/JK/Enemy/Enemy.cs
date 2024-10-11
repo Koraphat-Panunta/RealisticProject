@@ -40,7 +40,10 @@ public class Enemy : Character
     // Update is called once per frame
     void Update()
     {
-        
+        if (GetHP() <= 0)
+        {
+            enemyStateManager.ChangeState(enemyStateManager.enemyDead);
+        }
     }
     private void FixedUpdate()
     {
