@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Snow mountain tracks/s2.unity
+    guid: b8706cfd53e264041a8e60260b4cd2c8
   m_configObjects: {}
